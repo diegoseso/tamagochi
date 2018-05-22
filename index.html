@@ -3,7 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title>Tamagochi</title>
-    <script>
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+</head>
+<body>
+   <p>Your tamagochi has <strong id="actualHappiness">0</strong> % of happiness<p>
+   <button>Feed</button>
+   <button>Nag</button>
+   <button>Pet</button>
+   <script>
         console.log('welcome to the tamagochi game');
         var minimumHappiness = 0;
         var maximumHappiness = 100;
@@ -19,8 +26,9 @@
         var generalHappiness = 0.1;
 
         function pet(){
-            return;
+            return acutualHappiness = actualHappiness + petingHappiness;
         }
+        
 
         function nag(){
             return;
@@ -30,15 +38,15 @@
             return;
         }
 
-        actualHappiness = setActualHappiness();
+        function InitializeActualHappiness(){
+            return actualHappiness = initialHappiness;
+        }
+
+        InitializeActualHappiness();
+        console.log(actualHappiness);
+        $("#actualHappiness").text(actualHappiness);
 
        //@TODO get jquery working here or get to know what is a getElementById function
-
-    </script>
-</head>
-<body>
-   <button>Feed</button>
-   <button>Nag</button>
-   <button>Pet</button>
+   </script>
 </body>
 </html>
