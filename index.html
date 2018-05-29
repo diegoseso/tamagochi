@@ -6,10 +6,10 @@
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
 </head>
 <body>
-   <p>Your tamagochi has <strong id="actualHappiness">0</strong> % of happiness<p>
-   <button>Feed</button>
-   <button>Nag</button>
-   <button>Pet</button>
+   <p>Your tamagochi has <strong id="actualHappiness">0</strong> /100 of happiness<p>
+   <button onclick="feed()">Feed</button>
+   <button onclick="nag()">Nag</button>
+   <button onclick="pet()">Pet</button>
    <script>
         console.log('welcome to the tamagochi game');
         var minimumHappiness = 0;
@@ -26,16 +26,18 @@
         var generalHappiness = 0.1;
 
         function pet(){
-            return actualHappiness = actualHappiness + petingHappiness;
+            actualHappiness = actualHappiness + petingHappiness;
+            $("#actualHappiness").text(actualHappiness);
         }
-        
 
         function nag(){
-            return actualHappiness + naggingHappiness;
+            actualHappiness = actualHappiness + naggingHappiness;
+            $("#actualHappiness").text(actualHappiness);
         }
 
         function feed(){
-            return actualHappiness + feedingHappiness;
+            actualHappiness = actualHappiness + feedingHappiness;
+            $("#actualHappiness").text(actualHappiness);
         }
 
         function InitializeActualHappiness(){
@@ -46,7 +48,6 @@
         console.log(actualHappiness);
         $("#actualHappiness").text(actualHappiness);
 
-       //@TODO get jquery working here or get to know what is a getElementById function
    </script>
 </body>
 </html>
