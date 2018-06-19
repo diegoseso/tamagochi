@@ -26,17 +26,36 @@
         var generalHappiness = 0.1;
 
         function pet(){
-            actualHappiness = actualHappiness + petingHappiness;
+            if (actualHappiness + petingHappiness > 100) {
+                actualHappiness = 100
+            }
+            else {
+                actualHappiness = actualHappiness + petingHappiness
+            }
+
             $("#actualHappiness").text(actualHappiness);
         }
 
         function nag(){
-            actualHappiness = actualHappiness + naggingHappiness;
+            if (actualHappiness + naggingHappiness < 0){
+                actualHappiness = 0
+            }
+            else {
+                actualHappiness = actualHappiness + naggingHappiness
+            }
+
+
             $("#actualHappiness").text(actualHappiness);
         }
 
         function feed(){
-            actualHappiness = actualHappiness + feedingHappiness;
+            if (actualHappiness + feedingHappiness > 100) {
+                actualHappiness = 100
+            }
+            else {
+                actualHappiness = actualHappiness + feedingHappiness
+            }
+
             $("#actualHappiness").text(actualHappiness);
         }
 
