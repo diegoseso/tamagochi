@@ -1,23 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="stylesheet.css">
     <meta charset="UTF-8">
     <title>Tamagochi</title>
     <script src="jquery-3.3.1.js"></script>
 </head>
 <body>
-
-    <div class="center">
-       <p>Your Tamagochi has <strong id="actualHappiness">0</strong> /100 of happiness</p>
-           <div>
-               <button class="button" onclick="feed()">Feed</button>
-               <button class="button" onclick="nag()">Nag</button>
-               <button class="button" onclick="pet()">Pet</button>
-          </div>
-    </div>
+   <p>Your tamagochi has <strong id="actualHappiness">0</strong> /100 of happiness<p>
+   <button onclick="feed()">Feed</button>
+   <button onclick="nag()">Nag</button>
+   <button onclick="pet()">Pet</button>
    <script>
-
         console.log('welcome to the tamagochi game');
         var minimumHappiness = 0;
         var maximumHappiness = 100;
