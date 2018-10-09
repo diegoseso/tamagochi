@@ -4,70 +4,13 @@
     <link rel="stylesheet" href="stylesheet.css">
     <meta charset="UTF-8">
     <title>Tamagochi</title>
-    <script src="jquery-3.3.1.js"></script>
+    <script src="assets/js/phaser.js"></script>
+    <script src="./assets/main.js" charset="utf-8"></script>
+    <script src="./assets/js/PreloadState.js"></script>
+    <script src="./assets/js/PreloadState.js"></script>
+    <script src="./assets/js/GameState.js"></script>
 </head>
 <body>
-   <p>Your tamagochi has <strong id="actualHappiness">0</strong> /100 of happiness<p>
-   <button onclick="feed()">Feed</button>
-   <button onclick="nag()">Nag</button>
-   <button onclick="pet()">Pet</button>
-   <script>
-        console.log('welcome to the tamagochi game');
-        var minimumHappiness = 0;
-        var maximumHappiness = 100;
-        var initialHappiness = 50;
-        var actualHappiness;
 
-        var petingHappiness = 2;
-        var naggingHappiness = -2;
-
-        var feedingHappiness = 5;
-        var forgetToFeedHappiness = -5;
-
-        var generalHappiness = 0.1;
-
-        function pet(){
-            if (actualHappiness + petingHappiness > 100) {
-                actualHappiness = 100
-            }
-            else {
-                actualHappiness = actualHappiness + petingHappiness
-            }
-
-            $("#actualHappiness").text(actualHappiness);
-        }
-
-        function nag(){
-            if (actualHappiness + naggingHappiness < 0){
-                actualHappiness = 0
-            }
-            else {
-                actualHappiness = actualHappiness + naggingHappiness
-            }
-
-
-            $("#actualHappiness").text(actualHappiness);
-        }
-
-        function feed(){
-            if (actualHappiness + feedingHappiness > 100) {
-                actualHappiness = 100
-            }
-            else {
-                actualHappiness = actualHappiness + feedingHappiness
-            }
-
-            $("#actualHappiness").text(actualHappiness);
-        }
-
-        function InitializeActualHappiness(){
-            return actualHappiness = initialHappiness;
-        }
-
-        InitializeActualHappiness();
-        console.log(actualHappiness);
-        $("#actualHappiness").text(actualHappiness);
-
-   </script>
 </body>
 </html>
